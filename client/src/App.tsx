@@ -1,7 +1,7 @@
 import {Box, Container} from '@mui/material';
 import React from 'react';
 import './App.css';
-import Header from "./components/Header";
+import Home from "./pages/Home";
 
 function App() {
   return (
@@ -9,8 +9,9 @@ function App() {
         <Container>
             <Box sx={{ height: '100vh',
                 display: 'flex',
-                justifyContent: 'center' }}>
-                <Header />
+                justifyContent: 'center'}}>
+
+                <Home />
             </Box>
         </Container>
     </>

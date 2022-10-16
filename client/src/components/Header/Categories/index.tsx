@@ -1,41 +1,54 @@
 import React from 'react';
-import {Stack} from "@mui/material";
+import {Box, Stack} from "@mui/material";
+import ExpandMore from '@mui/icons-material/ExpandMore';
+
 
 const categoriesList = [
     {
-        name: "Computers"
+        name: "Computers",
+        id: 0,
     },
     {
-        name: "Gaming"
+        name: "Gaming",
+        id: 0,
     },
     {
-        name: "Apple"
+        name: "Apple",
+        id: 0,
     },
     {
-        name: "Storage"
+        name: "Storage",
+        id: 0,
     },
     {
-        name: "Images and Sound"
+        name: "Images and Sound",
+        id: 0,
     },
     {
-        name: "printers"
+        name: "printers",
+        id: 0,
     },
     {
-        name: "Office"
+        name: "Office",
+        id: 0,
     },
     {
-        name: "More categories\n"
+        name: "More categories",
+        id: 0,
     },
 
-]
+];
 
 const Categories = () => (
     <>
-        <Stack>
+        <Stack direction={{ xs: 'column', sm: 'row' }}
+               spacing={{ xs: 1, sm: 2, md: 4 }}
+               sx={{ mt: "20px", gap: "25px", height: 50 }}>
             {categoriesList.map((o, i) => (
-                <div key={i}>
+                <Box key={o.id} sx={{ display: "flex", ml: "70px",  }}>
                     {o.name}
-                </div>
+                    <ExpandMore fontSize="small"  />
+                </Box>
             ))}
         </Stack>
 

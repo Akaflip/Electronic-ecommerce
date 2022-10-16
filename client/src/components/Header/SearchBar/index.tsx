@@ -19,7 +19,7 @@ const StyledSearchButton = styled(Button)(({ theme }) => ({
     height: 48,
     backgroundColor: "#E31C79",
     marginTop: 27,
-    marginLeft: 940,
+    marginLeft: 980,
     border: "None",
     mixBlendMode: "normal",
     borderRadius: 5,
