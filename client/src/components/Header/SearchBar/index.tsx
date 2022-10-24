@@ -1,18 +1,17 @@
 import React from 'react';
-import {Button, styled, TextField} from "@mui/material";
+import {Box, Button, styled, TextField} from "@mui/material";
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 
-const StyledInputBase = styled(TextField)(({ theme }) => ({
-    color: 'inherit',
+const StyledInputBase = styled(Box)(({ theme }) => ({
     backgroundColor: "#fff",
     borderRadius: 5,
     width: 680,
     height: 48,
-    border: "none",
     marginTop: 30,
-    marginLeft: 50
+    marginLeft: 50,
+    outlined: "none"
 
-})) as typeof TextField;
+})) as typeof Box;
 
 const StyledSearchButton = styled(Button)(({ theme }) => ({
     position: "absolute",
@@ -31,7 +30,7 @@ const StyledSearchButton = styled(Button)(({ theme }) => ({
 
 const SearchBar = () => (
     <>
-        <StyledInputBase id="outlined-basic" placeholder="Outlined" variant="outlined"  />
+        <StyledInputBase placeholder="Outlined" component='input'  />
         <StyledSearchButton>
             <SearchOutlinedIcon color="action" height={15} />
         </StyledSearchButton>

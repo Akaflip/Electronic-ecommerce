@@ -6,10 +6,10 @@ import Home from "./pages/Home";
 function App() {
   return (
     <>
-        <Container>
+        <Container maxWidth="xl">
             <Box sx={{ height: '100vh',
                 display: 'flex',
-                justifyContent: 'center'}}>
+                justifyContent: 'center', width: 1400 }}>
 
                 <Home />
             </Box>
