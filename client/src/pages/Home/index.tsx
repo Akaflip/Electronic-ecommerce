@@ -5,6 +5,7 @@ import {Box, Container, Divider} from "@mui/material";
 import FavoritesProducts from "../../components/FavoritesProducts";
 import LatestProducts from "../../components/LatestProducts";
 import Catalogs from "../../components/Catalogs";
+import Footer from "../../components/Footer";
 
 const Home = () => {
     return (
@@ -18,6 +19,7 @@ const Home = () => {
                     <FavoritesProducts />
                     <LatestProducts />
                     <Catalogs />
+                    <Footer />
                 </Box>
             </Container>
         </>
