@@ -6,21 +6,19 @@ import FavoritesProducts from "../../components/FavoritesProducts";
 import LatestProducts from "../../components/LatestProducts";
 import Catalogs from "../../components/Catalogs";
 import Footer from "../../components/Footer";
+import Layout from "../../components/Layout";
 
 const Home = () => {
     return (
         <>
             <Container>
-                <Box >
-
-                    <Header />
+                <Layout>
                     <Divider variant="middle" sx={{ bgcolor: "#ffffff", }} />
                     <Slider />
                     <FavoritesProducts />
                     <LatestProducts />
                     <Catalogs />
-                    <Footer />
-                </Box>
+                </Layout>
             </Container>
         </>
     )

@@ -19,10 +19,9 @@ import tp from "../../assets/image/PayApps/tpago wht 1.png"
 
 
 const Footer = () => {
-
     return (
         <footer>
-            <Box sx={{ display: "flex", gap: "20px", bgcolor: "#002F6C", color: "#fff", mt: "3%", width: "100%" }}>
+            <Box sx={{ display: "flex", gap: "20px", bgcolor: "#002F6C", color: "#fff", mt: "3%", width: "70vw" }}>
 
                 <Box sx={{ ml: "40px", pt: "30px" }}>
                     <Typography variant='h5'>
