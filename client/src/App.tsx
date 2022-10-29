@@ -3,16 +3,19 @@ import React from 'react';
 import './App.css';
 import Home from "./pages/Home";
 import {Route, Routes} from "react-router-dom";
+import Products from "./pages/Products";
+
 
 function App() {
   return (
     <>
         <Container maxWidth="xl">
-            <Box sx={{ height: '100vh',
+            <Box sx={{
                 display: 'flex',
-                justifyContent: 'center', width: 1400 }}>
+                justifyContent: 'center', flexDirection: "column", width: 1400 }}>
                 <Routes>
                     <Route path="/" element={<Home />} />
+                    <Route path="products/" element={<Products />} />
                 </Routes>
             </Box>
         </Container>

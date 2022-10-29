@@ -9,9 +9,7 @@ import Categories from "./Categories";
 
 const Header: React.FC = () => {
     return (
-            <AppBar position="static"
-                    sx={{ display: "flex", width: 1400, height: "800", backgroundColor: "#002F6C" }}>
-
+        <AppBar position="static" sx={{ bgcolor: "#002F6C", maxWidth: "1400px", width: "90vw" }}>
                 <Toolbar>
                     <Box sx={{ ml: "40px" }}>
                         <img src={logo} alt="logo"/>
@@ -21,7 +19,6 @@ const Header: React.FC = () => {
                 </Toolbar>
                 <Divider variant="middle" sx={{ bgcolor: "#ffffff", marginTop: "15px" }} />
                 <Categories />
-
             </AppBar>
     )
 };

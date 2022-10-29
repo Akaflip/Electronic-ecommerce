@@ -12,7 +12,7 @@ const Slider = () => {
 
     return(
         <>
-            <Box sx={{ bgcolor: "#002F6C", width: 1400, height: 500, }}>
+            <Box sx={{ bgcolor: "#002F6C", width: "73vw", height: "50vh", }}>
                 {
                     Banners.map((b, i) => (
                         <div key={i}>
@@ -20,8 +20,9 @@ const Slider = () => {
                                 activeSlide == i ? (<Box
                                     component="img"
                                     sx={{
-                                        height: 500,
-                                        width: 1400,
+                                        height: "50vh",
+                                        width: "73vw",
+                                        bgcolor: "#fff"
                                     }}
                                     src={b.ban}
                                 />) : null
