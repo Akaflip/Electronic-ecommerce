@@ -1,84 +1,8 @@
 import React from 'react';
-import {Box, Button, Stack, Typography} from "@mui/material";
+import {Box, Stack, Typography} from "@mui/material";
 import ExpandMore from '@mui/icons-material/ExpandMore';
 import {NavLink} from "react-router-dom";
-
-
-const categoriesList = [
-    {
-        title: "Computers",
-        id: 0,
-        categories: [
-            "Desktop",
-            "Gaming Desktop",
-            "Laptop"
-        ]
-    },
-    {
-        title: "Gaming",
-        id: 0,
-        categories: [
-            "Desktop",
-            "Gaming Desktop",
-            "Laptop"
-        ]
-    },
-    {
-        title: "Apple",
-        id: 0,
-        categories: [
-            "Desktop",
-            "Gaming Desktop",
-            "Laptop"
-        ]
-    },
-    {
-        title: "Storage",
-        id: 0,
-        categories: [
-            "Desktop",
-            "Gaming Desktop",
-            "Laptop"
-        ]
-    },
-    {
-        title: "Images and Sound",
-        id: 0,
-        categories: [
-            "Desktop",
-            "Gaming Desktop",
-            "Laptop"
-        ]
-    },
-    {
-        title: "printers",
-        id: 0,
-        categories: [
-            "Desktop",
-            "Gaming Desktop",
-            "Laptop"
-        ]
-    },
-    {
-        title: "Office",
-        id: 0,
-        categories: [
-            "Desktop",
-            "Gaming Desktop",
-            "Laptop"
-        ]
-    },
-    {
-        title: "More categories",
-        id: 0,
-        categories: [
-            "Desktop",
-            "Gaming Desktop",
-            "Laptop"
-        ]
-    },
-
-];
+import {categoriesList} from "../../../assets/categories";
 
 const Categories = () => (
 
@@ -101,9 +25,11 @@ const Categories = () => (
                                 {o.title}
                             </Typography>
 
-                            {o.categories.map(( name, i ) => <NavLink to={`/${i}`} style={{ textDecoration: "none" }} ><Typography sx={{ color: "#000", mt: "5px" }}> {name} </Typography></NavLink>)}
-
-
+                            {o.categories.map(( o, i ) =>
+                                <NavLink to={`/${i}`} style={{ textDecoration: "none" }} >
+                                    <Typography sx={{ color: "#000", mt: "5px" }}> {o.name}
+                                    </Typography>
+                                </NavLink>)}
 
                         </Box>
                     </Typography>

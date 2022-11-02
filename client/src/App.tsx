@@ -15,7 +15,7 @@ function App() {
                 justifyContent: 'center', flexDirection: "column", width: 1400 }}>
                 <Routes>
                     <Route path="/" element={<Home />} />
-                    <Route path="products/" element={<Products />} />
+                    <Route path="products/:category" element={<Products />} />
                 </Routes>
             </Box>
         </Container>

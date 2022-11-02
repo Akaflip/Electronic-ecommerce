@@ -11,7 +11,7 @@ const Home = () => {
     return (
             <Container>
                 <Layout>
-                    <Header />
+
                     <Divider variant="middle" sx={{ bgcolor: "#ffffff", }} />
                     <Slider />
                     <FavoritesProducts />

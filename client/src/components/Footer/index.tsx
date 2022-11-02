@@ -20,8 +20,10 @@ import tp from "../../assets/image/PayApps/tpago wht 1.png"
 
 const Footer = () => {
     return (
-        <footer>
-            <Box sx={{ display: "flex", gap: "20px", bgcolor: "#002F6C", color: "#fff", mt: "3%", width: "70vw" }}>
+        <Box component="footer" sx={{ display: "flex", justifyContent: "center", }}>
+            <Box
+                sx={{ display: "flex", gap: "20px", justifyContent: "center",
+                    bgcolor: "#002F6C", color: "#fff", mt: "3%", width: "90vw" }}>
 
                 <Box sx={{ ml: "40px", pt: "30px" }}>
                     <Typography variant='h5'>
@@ -137,7 +139,7 @@ const Footer = () => {
 
 
             </Box>
-        </footer>
+        </Box>
     )
 }
 
