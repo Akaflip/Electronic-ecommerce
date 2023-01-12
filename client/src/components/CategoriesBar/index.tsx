@@ -12,7 +12,7 @@ const CategoriesBar = ({ category }: any) => {
     <Box
         sx={{
             display: "flex", flexDirection: "column", justifyContent: "center",
-            width: "20vw", boxShadow: "4px 4px 20px #D0D0D0", borderRadius: "10px"
+            width: "15vw", boxShadow: "4px 4px 20px #D0D0D0", borderRadius: "10px",mt: "2%",
         }}>
 
         <Box sx={{ml: "47px"}}>
@@ -21,9 +21,9 @@ const CategoriesBar = ({ category }: any) => {
             </Typography>
             {categoriesList.map((o, i) => (
                 <Box>
-                    <Typography key={i} sx={{color: "#555453"}}>
+                    <Box component={NavLink} to={`/products/${o.title}`} key={i} sx={{ display: "flex", flexDirection: "column", color: "#555453", textDecoration: "none", mt: "10px", fontWeight: "700"}}>
                         {o.title}
-                    </Typography>
+                    </Box>
                     {category == o.title ? (
                         <Box sx={{display: "flex", flexDirection: "column", color: "#002F6C", fontWeight: "600"}}>
                             {o.categories.map((c, i) => (

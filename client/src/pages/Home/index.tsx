@@ -9,17 +9,19 @@ import Layout from "../../components/Layout";
 
 const Home = () => {
     return (
-            <Container>
-                <Layout>
+        <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center", 
+        flexDirection: "column", }}>
+            <Layout>
 
-                    <Divider variant="middle" sx={{ bgcolor: "#ffffff", }} />
-                    <Slider />
-                    <FavoritesProducts />
-                    <LatestProducts />
-                    <Catalogs />
-                </Layout>
+<Divider variant="middle" sx={{ bgcolor: "#ffffff", }} />
+<Slider />
+<FavoritesProducts />
+<LatestProducts />
+<Catalogs />
+</Layout>
+        </Box>
+                
 
-            </Container>
 
     )
 };

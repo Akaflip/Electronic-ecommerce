@@ -3,6 +3,7 @@ import {Box, Stack, Typography} from "@mui/material";
 import ExpandMore from '@mui/icons-material/ExpandMore';
 import {NavLink} from "react-router-dom";
 import {categoriesList} from "../../../assets/categories";
+import styled from '@emotion/styled';
 
 const Categories = () => (
 
@@ -17,7 +18,9 @@ const Categories = () => (
                         }
                     }  }}>
                     <Typography>
-                        {o.title}
+                        <NavLink to={`/Products/${o.title}`} style={{ textDecoration: "none", color: "#fff" }}>
+                            {o.title}
+                        </NavLink>
                         <ExpandMore fontSize="small"  />
                         <Box component="div"
                              sx={{ display: "none", flexDirection: "column", bgcolor: "#fff", width: "200px", textAlign: "center", position: "absolute", zIndex: "100000" }}>

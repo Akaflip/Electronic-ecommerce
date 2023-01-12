@@ -1,6 +1,10 @@
 import React from 'react';
 import {Button, CardActions, CardContent, CardMedia, Typography, Card, Rating, Box} from "@mui/material";
-import Product from "../../assets/image/product.png"
+import Product from "../../assets/image/product.png";
+
+
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+import RemoveRedEyeOutlinedIcon from '@mui/icons-material/RemoveRedEyeOutlined';
 
 type cardProps = {
     title: string;
@@ -14,14 +18,28 @@ const CardComponent = ({ title, price }: cardProps) => {
 
     return (
         <Card sx={{ maxWidth: "250px", width: "100%", ":hover": {
+            boxShadow: "0px 0px 20px #D0D0D0",
+            borderRadius: "10px",
                 "button": {
                     display: "block"
-                }
+                },
+                "div": {
+                    display: "block",
+                },
             } }}>
-            <CardMedia sx={{ textAlign: "center" }}>
-                <Box component="img"
-                     src={Product} alt="product"/>
+            <CardMedia sx={{ textAlign: "center", display: "flex", alignItems: "center", justifyContent: "center", ":hover": {
+
+            } }}>
+                <Box component="img"src={Product} alt="product"/>
             </CardMedia>
+            <Box component="div" sx={{ display: "none", position: "absolute", mt: "-190px", ml: "195px" }}>
+                    <Box sx={{ display: "flex", justifyContent: "center", ml: "auto", mr: "30px", pl: "auto", height: "30px", width: "30px", borderRadius: "4px", alignItems: "center", bgcolor: "#E5E5E5", ":hover": { bgcolor: "#E31C79" } }}>
+                        <FavoriteBorderIcon sx={{ height: "20px", ml: "auto", mr: "auto" }}/>
+                    </Box>
+                    <Box sx={{ display: "flex", justifyContent: "center", ml: "auto", mr: "30px", mt: "5px", height: "30px", width: "30px", borderRadius: "4px", alignItems: "center", bgcolor: "#E5E5E5", ":hover": { bgcolor: "#E31C79" } }}>
+                        <RemoveRedEyeOutlinedIcon sx={{ height: "20px", ml: "auto", mr: "auto" }}/>
+                    </Box>
+                </Box>
 
             <Box sx={{ bgcolor: "#F9F9F9" }}>
                 <CardContent>
