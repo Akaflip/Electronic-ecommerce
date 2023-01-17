@@ -1,7 +1,7 @@
 import { DataTypes, Model } from "sequelize";
 import sequelize from "sequelize/types/sequelize";
-import Device from "./device.model";
-import User from "./user.model";
+import Device from "./device.model.js";
+import User from "./user.model.js";
 class Rating extends Model {
 }
 ;

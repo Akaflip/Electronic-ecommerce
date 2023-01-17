@@ -7,14 +7,20 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
+import Brand from "../db/models/brand.model.js";
 class BrandController {
-    create() {
+    create(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
+            const name = req.body;
+            const brand = yield Brand.create(name);
+            return res.json(brand);
         });
     }
     ;
-    getAll() {
+    getAll(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
+            const brands = yield Brand.findAll();
+            return res.json(brands);
         });
     }
     ;

@@ -1,8 +1,8 @@
 import { Model, DataTypes, } from "sequelize";
 import sequelize from "sequelize/types/sequelize";
-import BasketDevice from "./basketDevice.model";
-import DeviceInfo from "./DeviceInfo.model";
-import Rating from "./rating.model";
+import BasketDevice from "./basketDevice.model.js";
+import DeviceInfo from "./DeviceInfo.model.js";
+import Rating from "./rating.model.js";
 class Device extends Model {
 }
 ;

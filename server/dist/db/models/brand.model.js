@@ -1,7 +1,7 @@
 import { DataTypes, Model } from "sequelize";
 import sequelize from "sequelize/types/sequelize";
-import Type from "./type.model";
-import TypeBrand from "./typeBrand.model";
+import Type from "./type.model.js";
+import TypeBrand from "./typeBrand.model.js";
 class Brand extends Model {
 }
 ;

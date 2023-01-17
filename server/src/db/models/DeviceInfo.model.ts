@@ -1,6 +1,6 @@
 import { DataTypes, ForeignKey, InferAttributes, InferCreationAttributes, Model } from "sequelize";
 import sequelize from "sequelize/types/sequelize";
-import Device from "./device.model";
+import Device from "./device.model.js";
 
 
 class DeviceInfo extends Model<InferAttributes<DeviceInfo>,InferCreationAttributes<DeviceInfo>> {

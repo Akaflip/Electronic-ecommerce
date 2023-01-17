@@ -10,13 +10,12 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 import express from "express";
 import cors from 'cors';
 import sequelizeConnection from "./db/config.js";
+import router from "./routes/index.js";
 const app = express();
 app.use(express.json());
 app.use(cors());
 const PORT = 8000;
-app.get('/', (req, res) => {
-    return res.json('hello world');
-});
+app.use('/api', router);
 const start = () => __awaiter(void 0, void 0, void 0, function* () {
     try {
         yield sequelizeConnection.authenticate();

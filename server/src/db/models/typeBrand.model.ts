@@ -1,6 +1,6 @@
 import { DataTypes, ForeignKey, InferAttributes, InferCreationAttributes, Model } from "sequelize";
 import sequelize from "sequelize/types/sequelize";
-import Brand from "./brand.model";
+import Brand from "./brand.model.js";
 
 
 class TypeBrand extends Model<InferAttributes<TypeBrand>,InferCreationAttributes<TypeBrand>> {

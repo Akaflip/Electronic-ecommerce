@@ -1,8 +1,8 @@
 import { InferAttributes, InferCreationAttributes, Model, DataTypes, ForeignKey, } from "sequelize";
 import sequelize from "sequelize/types/sequelize";
-import Basket from "./basket.model";
-import Device from "./device.model";
-import User from "./user.model";
+import Basket from "./basket.model.js";
+import Device from "./device.model.js";
+import User from "./user.model.js";
 
 
 class BasketDevice extends Model<InferAttributes<BasketDevice>, InferCreationAttributes<BasketDevice>> {
