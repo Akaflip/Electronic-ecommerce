@@ -1,13 +1,18 @@
-import { Request, Response } from 'express'
-import Brand from "../db/models/brand.model.js";
+import { Request, Response } from 'express';
+import {Brand} from "../db/models/index.js";
+import { apiError } from '../error/apiError.js';
 
 class BrandController {
     async create(req: Request, res: Response) {
         const name = req.body;
+        const brand = await Brand.findOne({where: name});
 
-        const brand = await Brand.create(name);
+        if(brand) {
+            return apiError.badRequest('такой brand уже существует')
+        };
+        const newBrand = await Brand.create(name);
 
-        return res.json(brand);
+        return res.json(newBrand);
         
         
     };

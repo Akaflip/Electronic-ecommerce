@@ -7,13 +7,19 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-import Brand from "../db/models/brand.model.js";
+import { Brand } from "../db/models/index.js";
+import { apiError } from '../error/apiError.js';
 class BrandController {
     create(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
             const name = req.body;
-            const brand = yield Brand.create(name);
-            return res.json(brand);
+            const brand = yield Brand.findOne({ where: name });
+            if (brand) {
+                return apiError.badRequest('такой brand уже существует');
+            }
+            ;
+            const newBrand = yield Brand.create(name);
+            return res.json(newBrand);
         });
     }
     ;

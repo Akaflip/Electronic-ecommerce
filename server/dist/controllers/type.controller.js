@@ -7,14 +7,26 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
+import { Type } from "../db/models/index.js";
+import { apiError } from '../error/apiError.js';
 class TypeController {
-    create() {
+    create(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
+            const name = req.body;
+            const type = yield Type.findOne({ where: name });
+            if (type) {
+                return apiError.badRequest('такой type уже существует');
+            }
+            ;
+            const newtype = yield Type.create(name);
+            return res.json(newtype);
         });
     }
     ;
-    getAll() {
+    getAll(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
+            const types = yield Type.findAll();
+            return res.json(types);
         });
     }
     ;

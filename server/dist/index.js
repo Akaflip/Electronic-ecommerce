@@ -7,13 +7,21 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
+import fileUpload from "express-fileupload";
+import path, { dirname } from "path";
+import { fileURLToPath } from 'url';
 import express from "express";
 import cors from 'cors';
+import dotenv from "dotenv";
 import sequelizeConnection from "./db/config.js";
 import router from "./routes/index.js";
+export const __dirname = dirname(fileURLToPath(import.meta.url));
+dotenv.config();
 const app = express();
 app.use(express.json());
 app.use(cors());
+app.use(fileUpload());
+app.use(express.static(path.resolve(__dirname, 'static')));
 const PORT = 8000;
 app.use('/api', router);
 const start = () => __awaiter(void 0, void 0, void 0, function* () {
